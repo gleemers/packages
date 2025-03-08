@@ -8,3 +8,4 @@ commands => rm -rf lunos
           > cd lunos && cargo build --release
           > cd lunos && mv target/release/lunos $HOME/.local/bin
           > rm -rf lunos
+uninstall => rm -rf $HOME/.local/bin/lunos
