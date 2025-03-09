@@ -1,0 +1,13 @@
+name => catsay
+version => 1.0.1
+description => Catsay is a fun command-line tool that displays a
+             > customizable message alongside an adorable ASCII art cat,
+             > bringing a touch of whimsy to your terminal. 
+author => Altiran
+license => MIT
+commands => rm -rf catsay
+          > git clone https://github.com/Altiran/catsay.git
+          > cd catsay && mkdir out && make -j4
+          > mv catsay/out/catsay ~/.local/bin/
+          > rm -rf catsay
+uninstall => rm -rf $HOME/.local/bin/catsay
