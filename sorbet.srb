@@ -1,0 +1,11 @@
+name => sorbet
+version => 0.1.0
+description => A simple KVP (Key Value Pair) file format
+author => Thoq
+license => MIT
+commands => rm -rf sorbet
+          > git clone https://github.com/Thoq-jar/sorbet.git
+          > cd sorbet && cargo build --release --package cli
+          > cd sorbet && mv target/release/cli $HOME/.local/bin/sorbet
+          > rm -rf sorbet
+uninstall => rm -rf $HOME/.local/bin/sorbet
