@@ -8,6 +8,6 @@ license => MIT
 commands => rm -rf catsay
           > git clone https://github.com/Altiran/catsay.git
           > cd catsay && mkdir out && make -j4
-          > mv catsay/out/catsay ~/.local/bin/
+          > mv catsay/out/catsay ~/.local/bin/catsay
           > rm -rf catsay
 uninstall => rm -rf $HOME/.local/bin/catsay
