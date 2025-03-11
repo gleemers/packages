@@ -6,6 +6,6 @@ license => MIT
 commands => rm -rf lunos
           > git clone https://github.com/LunosRS/lunos.git
           > cd lunos && cargo build --release
-          > cd lunos && mv target/release/lunos $HOME/.local/bin
+          > cd lunos && mv target/release/lunos $HOME/.local/bin/
           > rm -rf lunos
 uninstall => rm -rf $HOME/.local/bin/lunos
