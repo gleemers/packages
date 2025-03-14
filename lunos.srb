@@ -1,5 +1,5 @@
 name => lunos
-version => 0.6.4
+version => 0.6.5
 description => An blazingly fast JavaScript runtime written in Rust.
 author => Thoq
 license => MIT
