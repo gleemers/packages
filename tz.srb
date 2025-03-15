@@ -1,0 +1,11 @@
+name => tz
+version => 0.1.0
+description => An blazingly fast compression utility written in Rust
+author => Thoq
+license => MIT
+commands => rm -rf tz
+          > git clone https://github.com/thoq-jar/tz.git
+          > cd tz && cargo build --release
+          > cd tz && mv target/release/tz $HOME/.local/bin/tz
+          > rm -rf tz
+uninstall => rm -rf $HOME/.local/bin/tz
