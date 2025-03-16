@@ -5,6 +5,6 @@ author => Thoq
 license => MIT
 commands => rm -rf downpurr
           > git clone https://github.com/thoq-jar/downpurr.git
-          > mv src/main.py ~/.local/bin/downpurr
+          > mv downpurr/src/main.py ~/.local/bin/downpurr
           > rm -rf downpurr
 uninstall => rm -rf $HOME/.local/bin/downpurr
