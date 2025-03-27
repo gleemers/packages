@@ -1,5 +1,8 @@
 #!/bin/bash
 
+### PIPEFAIL!!!
+set -o pipefail
+
 ### Variables
 NAME="TPI"
 AUTHOR="Thoq"
