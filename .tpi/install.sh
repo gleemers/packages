@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### PIPEFAIL!!!
-set -o pipefail
+set -e pipefail
 
 ### Variables
 NAME="TPI"
