@@ -3,6 +3,7 @@ version => 0.6.9
 description => An blazingly fast JavaScript runtime written in Rust.
 author => Thoq
 license => MIT
+deps => :
 commands => rm -rf lunos
           > git clone https://github.com/LunosRS/lunos.git
           > cd lunos && cargo build --release
