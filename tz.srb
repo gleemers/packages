@@ -3,6 +3,7 @@ version => 0.1.0
 description => A blazingly fast compression utility written in Rust
 author => Thoq
 license => MIT
+deps => :
 commands => rm -rf tz
           > git clone https://github.com/thoq-jar/tz.git
           > cd tz && cargo build --release
