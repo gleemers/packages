@@ -5,6 +5,7 @@ description => Catsay is a fun command-line tool that displays a
              > bringing a touch of whimsy to your terminal. 
 author => Altiran
 license => MIT
+deps => :
 commands => rm -rf catsay
           > git clone https://github.com/Altiran/catsay.git
           > cd catsay && mkdir out && make -j4
