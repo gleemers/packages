@@ -3,6 +3,7 @@ version => 1.0.0
 description => Quickly turn a website into a pseudo desktop app.
 author => Thoq
 license => MIT
+deps => :
 commands => rm -rf downpurr
           > git clone https://github.com/thoq-jar/downpurr.git
           > mv downpurr/src/main.py ~/.local/bin/downpurr
