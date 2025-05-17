@@ -1,5 +1,5 @@
 name => cooldown
-version => 1.0.0
+version => 0.2.0
 description => A simple system monitor to alert you if your CPU is too warm based on macmon
 author => Thoq
 license => MIT
