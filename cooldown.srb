@@ -3,10 +3,12 @@ version => 0.2.0
 description => A simple system monitor to alert you if your CPU is too warm based on macmon
 author => Thoq
 license => MIT
-deps => :
-commands => rm -rf cooldown
+unix_deps => :
+
+unix_commands => rm -rf cooldown
           > git clone https://github.com/Thoq-jar/Cooldown.git cooldown
           > cd cooldown && cargo build --release
           > cd cooldown && mv target/release/cooldown $HOME/.local/bin/cooldown
           > rm -rf cooldown
-uninstall => rm -rf $HOME/.local/bin/cooldown
+
+unix_uninstall => rm -rf $HOME/.local/bin/cooldown

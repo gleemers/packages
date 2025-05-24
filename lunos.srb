@@ -3,10 +3,22 @@ version => 0.7.1
 description => An blazingly fast JavaScript runtime written in Rust.
 author => Thoq
 license => MIT
-deps => :
-commands => rm -rf lunos
-          > git clone https://github.com/LunosRS/lunos.git
-          > cd lunos && cargo build --release
-          > cd lunos && mv target/release/lunos $HOME/.local/bin/lunos
-          > rm -rf lunos
-uninstall => rm -rf $HOME/.local/bin/lunos
+
+unix_deps => :
+win_deps => echo ''
+
+unix_commands => rm -rf lunos
+               > git clone https://github.com/LunosRS/lunos.git
+               > cd lunos && cargo build --release
+               > cd lunos && mv target/release/lunos $HOME/.local/bin/lunos
+               > rm -rf lunos
+
+win_commands => Remove-Item -Recurse -Force lunos
+              > git clone https://github.com/LunosRS/lunos.git
+              > Set-Location lunos; cargo build --release
+              > if (-not (Test-Path "$env:USERPROFILE\.local\bin")) { New-Item -ItemType Directory -Path "$env:USERPROFILE\.local\bin" }
+              > Move-Item -Path target\release\lunos.exe -Destination "$env:USERPROFILE\.local\bin\lunos.exe"
+              > Remove-Item -Recurse -Force lunos
+
+unix_uninstall => rm -rf $HOME/.local/bin/lunos
+win_uninstall => Remove-Item -Force "$env:USERPROFILE\.local\bin\lunos.exe"
