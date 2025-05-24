@@ -13,6 +13,8 @@ Write-Host "Written by $AUTHOR on $DATE"
 Write-Host "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
 Write-Host ""
 
+Write-Host "Windows is experimental, not all packages will work!"
+
 # Check for Git
 if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
     Write-Host "❌ Git is not installed!" -ForegroundColor Red
