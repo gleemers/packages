@@ -3,10 +3,22 @@ version => 0.1.0
 description => A simple KVP (Key Value Pair) file format
 author => Thoq
 license => MIT
-deps => :
-commands => rm -rf sorbet
-          > git clone https://github.com/Thoq-jar/sorbet.git
-          > cd sorbet && cargo build --release --package cli
-          > cd sorbet && mv target/release/cli $HOME/.local/bin/sorbet
-          > rm -rf sorbet
-uninstall => rm -rf $HOME/.local/bin/sorbet
+
+unix_deps => :
+win_deps => echo ''
+
+unix_commands => rm -rf sorbet
+               > git clone https://github.com/Thoq-jar/sorbet.git
+               > cd sorbet && cargo build --release --package cli
+               > cd sorbet && mv target/release/cli $HOME/.local/bin/sorbet
+               > rm -rf sorbet
+
+win_commands => Remove-Item -Recurse -Force sorbet
+              > git clone https://github.com/Thoq-jar/sorbet.git
+              > Set-Location sorbet; cargo build --release --package cli
+              > if (-not (Test-Path "$env:USERPROFILE\.local\bin")) { New-Item -ItemType Directory -Path "$env:USERPROFILE\.local\bin" }
+              > Move-Item -Path target\release\cli.exe -Destination "$env:USERPROFILE\.local\bin\sorbet.exe"
+              > Remove-Item -Recurse -Force sorbet
+
+unix_uninstall => rm -rf $HOME/.local/bin/sorbet
+win_uninstall => Remove-Item -Force "$env:USERPROFILE\.local\bin\sorbet.exe"
